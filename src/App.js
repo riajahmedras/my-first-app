@@ -6,20 +6,30 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FirstComp name="Riaj Ahmed" job="Football"></FirstComp>
+      <FirstComp name="Ahmed Only" job="Cricket"></FirstComp>
+      <FirstComp name="Abdullah" job="Siburi."></FirstComp>
+     </header>
     </div>
   );
 }
+const styleHere = {
+  border: '2px solid red',
+  padding: '10px',
+  margin: '5px',
+  background: 'black'
+}
+
+function FirstComp(props) {
+   return (<div style={styleHere}>
+      <h2>This is the name: {props.name}</h2>
+      <h3>This is job: {props.job}</h3>
+    </div>
+  )
+}
+const Products = [
+  {name: 'Photoshop', price: '$120'},
+  {name: 'Illustrator', price: '$120'},
+]
 
 export default App;
